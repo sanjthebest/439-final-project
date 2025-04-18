@@ -6,7 +6,7 @@ import random
 np.random.seed(42)
 random.seed(42)
 
-def generate_abortion_data(num_records=10000):
+def generate_abortion_data(num_records=20000):
     """
     Generate synthetic abortion-related health data.
     """
