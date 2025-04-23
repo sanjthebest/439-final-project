@@ -507,13 +507,13 @@ def generate_abortion_data(num_records=20000):
         data["State"].append(state_choice)
         data["Political_Affiliation_of_State"].append(political_affiliation)
         data["Legal_Status_of_Abortion"].append(legal_status)
-        data["State_Regulation"].append(regulation_level)
+        data["State_Regulations"].append(regulation_level)
 
     df = pd.DataFrame(data)
     return df
 
 # Generate and save the data
-df = generate_abortion_data(10000)
+df = generate_abortion_data(20000)
 df.to_csv("synthetic_abortion_data.csv", index=False)
 
 # Show sample and summary
