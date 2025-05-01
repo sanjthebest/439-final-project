@@ -420,6 +420,7 @@ def generate_abortion_data(num_records=20000):
     
     
     data = {
+        "Patient_ID": [],
         "Gestation_at_Abortion_Weeks": [],
         "Method_of_Abortion": [],
         "Travel_Out_of_State": [],
@@ -438,7 +439,8 @@ def generate_abortion_data(num_records=20000):
         "State_Regulations":[]
     }
 
-    for _ in range(num_records):
+    #for _ in range(num_records):
+    for patient_id in range(1, num_records + 1):
         # Gestation: between 4 and 24 weeks, skewed toward earlier weeks
         gestation = round(np.random.normal(loc=10, scale=3), 1)
         gestation = max(4, min(24, gestation))  # Clamp to valid range
@@ -492,6 +494,7 @@ def generate_abortion_data(num_records=20000):
         legal_status = state_metadata["Abortion_Laws_By_Year"][year]["Legal_Status"]
         regulation_level = state_metadata["Abortion_Laws_By_Year"][year]["Regulation_Level"]
         
+        data["Patient_ID"].append(patient_id)
         data["Gestation_at_Abortion_Weeks"].append(gestation)
         data["Method_of_Abortion"].append(method)
         data["Travel_Out_of_State"].append(travel)
