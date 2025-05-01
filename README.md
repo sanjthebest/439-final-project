@@ -18,11 +18,7 @@ Year, State, Political Affiliation of State, Legal Status of Abortion, State Reg
 
 Technologies Used
 
-Python 3.x
-Pandas
-NumPy
-Seaborn & Matplotlib
-Jupyter Notebook
+Python 3.x, Pandas, NumPy, Seaborn & Matplotlib, Jupyter Notebook
 
 
 Key Findings
