@@ -493,7 +493,7 @@ def generate_abortion_data(num_records=20000):
         political_affiliation = state_metadata["Political_Affiliation"]
         legal_status = state_metadata["Abortion_Laws_By_Year"][year]["Legal_Status"]
         regulation_level = state_metadata["Abortion_Laws_By_Year"][year]["Regulation_Level"]
-
+        
         data["Patient_ID"].append(patient_id)
         data["Gestation_at_Abortion_Weeks"].append(gestation)
         data["Method_of_Abortion"].append(method)
