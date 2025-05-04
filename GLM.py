@@ -88,3 +88,31 @@ plt.grid(True, axis='y', linestyle='--', alpha=0.7)
 plt.legend(["Mother Complications", "Child Complications"], title="Outcome", bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.tight_layout()
 plt.show()
+
+# Predict probabilities
+y_mother_pred = model_mother.predict(X)
+y_child_pred = model_child.predict(X)
+
+# Plot predicted probabilities vs actual for mother complications
+plt.figure(figsize=(10, 5))
+
+# Mother subplot
+plt.subplot(1, 2, 1)
+sns.scatterplot(x=y_mother_pred, y=y_mother, alpha=0.4)
+sns.lineplot(x=[0, 1], y=[0, 1], color='red', linestyle='--')
+plt.title("GLM: Predicted vs Actual (Mother)")
+plt.xlabel("Predicted Probability")
+plt.ylabel("Actual Outcome")
+plt.grid(True)
+
+# Child subplot
+plt.subplot(1, 2, 2)
+sns.scatterplot(x=y_child_pred, y=y_child, alpha=0.4)
+sns.lineplot(x=[0, 1], y=[0, 1], color='red', linestyle='--')
+plt.title("GLM: Predicted vs Actual (Child)")
+plt.xlabel("Predicted Probability")
+plt.ylabel("Actual Outcome")
+plt.grid(True)
+
+plt.tight_layout()
+plt.show()
