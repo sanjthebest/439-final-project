@@ -1,0 +1,24 @@
+pandas==1.5.3
+statsmodels==0.13.5
+matplotlib==3.7.1
+seaborn==0.12.2
+numpy==1.23.5
+scikit-learn==1.2.2
+
+How to Install statsmodels in Jupyter Notebook
+Option 1: Use a Jupyter cell with !pip
+In any cell in your notebook, run:
+!pip install statsmodels
+
+This installs statsmodels directly into the environment your Jupyter Notebook is running in.
+
+Option 2: Install from terminal in the Jupyter environment
+If you are running Jupyter from Anaconda or a virtual environment, open the terminal within Jupyter or your system terminal, and run:
+pip install statsmodels
+
+Step 3: Import and check
+After installation, go back to your notebook and add:
+import statsmodels.api as sm
+print(sm.__version__)
+
+If no error appears and the version is printed, the installation was successful!
