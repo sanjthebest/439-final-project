@@ -24,8 +24,8 @@ Technologies Used
 Python 3.x, Pandas, NumPy, Seaborn & Matplotlib, Jupyter Notebook, StatModels
 
 
-Instructions to install Statmodels on Jupyter Notebook:
 
+Instructions to install Statmodels on Jupyter Notebook
 Option 1: Use a Jupyter cell with !pip
 In any cell in your notebook, run:
 !pip install statsmodels
